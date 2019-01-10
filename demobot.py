@@ -6,16 +6,16 @@ app = Flask(__name__)
 def hello_world():
     return "Hello, Person!"
 
-@app.route('/ncss')
+@app.route('/ncss', methods=['GET', 'POST'])
 def greet_ncss():
     return "Hello, welcome to NCSS!"
 
-@app.route('/greet')
+@app.route('/greet', methods=['GET', 'POST'])
 def greet_person():
     name = request.values.get("name")
     return f'hi {name}!'
 
-@app.route('/weather')
+@app.route('/weather', methods=['GET', 'POST'])
 def weather():
     weather = float(request.values.get('weather'))
     if weather > 30:
