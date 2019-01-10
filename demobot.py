@@ -23,5 +23,15 @@ def weather():
     else:
         return f"the temperature is {weather}"
 
+@app.route('/Good Morning', methods=['GET', 'POST'])
+    def morning():
+        name = request.values.get("name")
+        return f'Good Morning {name}'
+
+ @app.route('/feeling', methods=['GET', 'POST'])
+    def feeling():
+        mood = request.values.get("mood")
+        return f"I am also feeling {mood}"
+
 if __name__ == '__main__':
     app.run()
