@@ -29,7 +29,7 @@ def morning():
     name = request.values.get("name")
     return f'Good Morning {name}'
 
- @app.route('/feeling', methods=['GET', 'POST'])
+@app.route('/feeling', methods=['GET', 'POST'])
 def feeling():
     mood = request.values.get("mood")
     return f"I am also feeling {mood}"
