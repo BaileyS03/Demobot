@@ -12,8 +12,7 @@ def greet_ncss():
 
 @app.route('/greet', methods=['GET', 'POST'])
 def greet_person():
-    print(request.values)
-    name = request.values.get("name")
+    name = request.values.get("text")
     return f'hi {name}!'
 
 @app.route('/weather', methods=['GET', 'POST'])
